@@ -10,9 +10,9 @@ This framework avoids brittle mobile scripting by enforcing a strict **Separatio
 
 * **`pages/base_page.py` (Core Engine Wrapper):** Encapsulates native Appium driver behaviors with explicit `WebDriverWait` synchronization guards to eliminate flaky elements on physical mobile hardware.
 
-* **`pages/login_page.py` (Page Object Model Layer):** Houses app-specific native component locators (Accessibility IDs & XPATHs) and structural user workflows. Test scripts contain zero raw selectors.
+* **`pages/*_page.py` (Page Object Model Layer):** Houses app-specific native component locators and reusable business interaction workflows partitioned by application features (`LoginPage`, `ProductsPage`, `MyCartsPage`, `CheckoutPage`).
 
-* **`tests/test_login.py` (Declarative Assertion Layer):** Focuses exclusively on mobile test orchestration, business validation checkpoints, and explicit Pytest assertions.
+* **`tests/testsauceapp.py` (Declarative Assertion Layer):** Focuses exclusively on full end-to-end mobile test orchestration, multi-page state transitions, form payload delivery, and explicit verification checkpoints.
 
 ---
 
