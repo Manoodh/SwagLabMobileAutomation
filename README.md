@@ -60,4 +60,4 @@ appium driver install uiautomator2
 appium
 
 # Open a separate terminal window inside the root directory and run the test suite
-pytest -v -s tests/test_login.py
+pytest -v -s tests/testsauceapp.py
