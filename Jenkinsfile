@@ -21,7 +21,7 @@ pipeline {
                 echo 'Routing automated script requests to local Appium infrastructure listener...'
                 // -v: Verbose output tracking steps
                 // -s: Capture and display custom stdout console prints in Jenkins log
-                bat 'pytest -v -s tests/testsauceapp.py'
+                bat 'python -m pytest -v -s tests/testsauceapp.py'
             }
         }
     }
